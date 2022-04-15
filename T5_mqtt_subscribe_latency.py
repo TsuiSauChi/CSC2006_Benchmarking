@@ -36,7 +36,7 @@ for i in range(10):
 average = Average(time_list)
 
 # Printing average of the list
-print("Average RRT =", average, "ms")
-print("Average Time for One Directional Latency", average/2, "ms")
+print("Average RRT =", average, "s")
+print("Average Time for One Directional Latency", average/2, "s")
 
 client.loop_forever()
