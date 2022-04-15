@@ -9,8 +9,9 @@ def on_connect(client, userdata, flags, rc):
     client.subscribe("#")
 
 def on_message(client, userdata, msg):
-    print(msg.topic)
-    print(msg.payload.decode("utf8"))
+    print()
+    print("Topic", msg.topic)
+    print("Payload", msg.payload.decode("utf8"))
 
 def Average(lst):
     return sum(lst) / len(lst)
@@ -35,6 +36,7 @@ for i in range(10):
 average = Average(time_list)
 
 # Printing average of the list
-print("Average of the list =", average)
+print("Average RRT =", average, "ms")
+print("Average Time for One Directional Latency", average/2, "ms")
 
 client.loop_forever()
